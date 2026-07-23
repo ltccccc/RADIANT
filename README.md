@@ -1,2 +1,37 @@
 # RADIANT
+
 RADIANT (Radiotherapy Anatomy-Dose Integrated fouNdAtion representaTion) is a radiotherapy foundation model trained to delineate gross and clinical target volumes (GTV and CTV) and generate three-dimensional radiation dose maps, enabling radiotherapy-specific representation learning for a range of downstream clinical tasks.
+
+## Overview
+
+RADIANT was designed to address a central challenge in radiotherapy AI: modelling patient-specific anatomy together with the spatial distribution of radiation dose. The model uses a two-stage learning strategy:
+
+- Stage 1: self-supervised masked autoencoder pretraining on planning CT to learn general anatomical representations.
+- Stage 2: radiotherapy-task refinement through hierarchical GTV prediction, CTV prediction and three-dimensional dose prediction.
+- Downstream adaptation: fusion of CT-derived anatomical features and model-generated dose priors for clinical outcome modelling.
+
+The resulting radiotherapy-task-refined encoder captures clinically meaningful anatomy-dose relationships and can be adapted to target delineation, dose modelling, treatment response, toxicity and survival-related endpoints across heterogeneous radiotherapy cohorts.
+
+## Code structure
+
+```text
+radiant/
+├── data/       Volume IO, manifests, datasets and ROI utilities
+├── models/     3D Swin encoder, MAE, decoders and downstream models
+├── losses/     Reconstruction, segmentation, dose, classification and survival losses
+├── metrics/    Segmentation, dose, classification, survival and bootstrap metrics
+├── train/      Distributed training entrypoints
+└── infer/      Target/dose generation and downstream inference
+```
+
+## Main entrypoints
+
+```bash
+python -m radiant.train.pretrain_mae
+python -m radiant.train.refine_stage2
+python -m radiant.train.downstream
+python -m radiant.infer.generate_targets_dose
+python -m radiant.infer.downstream
+```
+
+This repository contains the core RADIANT model, training and inference code only. Clinical data, model checkpoints, environment files, preprocessing pipelines and experimental outputs are intentionally excluded.
