@@ -22,7 +22,7 @@ In Stage 1, the encoder was initialised with [pretrained TAP-CT weights](https:/
 
 ### Stage 2: radiotherapy-task refinement
 
-In Stage 2, the pretrained encoder was refined through joint training on radiotherapy-specific tasks. The model first generated Pred-GTV from treatment-planning CT; Pred-CTV was then generated conditioned on CT and Pred-GTV; a 3D dose distribution was subsequently generated conditioned on CT and Pred-CTV. Clinical reference GTV and CTV contours were used as conditioning inputs during training; Pred-GTV and Pred-CTV were used during complete-cascade validation and testing.
+In Stage 2, the pretrained encoder was refined through joint training on radiotherapy-specific tasks. The model first generated Pred-GTV from treatment-planning CT; Pred-CTV was then generated conditioned on CT and Pred-GTV; a 3D dose distribution was subsequently generated conditioned on CT and Pred-CTV. Clinical reference GTV and CTV contours were used as conditioning inputs during training; Pred-GTV and Pred-CTV were used during complete-cascade validation and testing. **Joint supervision from target delineation and dose generation was intended to help the shared encoder learn radiotherapy-relevant CT features.**
 
 <img src="assets/stage2.png" alt="Stage 2 radiotherapy-task refinement" width="100%">
 

@@ -13,6 +13,6 @@
   <circle cx="852" cy="135" r="16" fill="#7559b3"/>
   <g fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" text-anchor="middle"><text x="78" y="141">1</text><text x="465" y="141">2</text><text x="852" y="141">3</text></g>
   <g font-family="Arial,Helvetica,sans-serif" fill="#17324f" font-size="18" font-weight="700"><text x="104" y="141">Self-supervised pretraining</text><text x="491" y="141">Radiotherapy-task refinement</text><text x="878" y="141">Downstream-task adaptation</text></g>
-  <g font-family="Arial,Helvetica,sans-serif" fill="#40576e" font-size="15"><text x="68" y="179">TAP-CT weights</text><text x="68" y="205">Treatment-planning CT</text><text x="455" y="179">GTV and CTV segmentation</text><text x="455" y="205">3D dose generation</text><text x="842" y="179">CT and RADIANT-generated dose</text><text x="842" y="205">Task-specific prediction heads</text></g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#40576e" font-size="15"><text x="68" y="179">TAP-CT framework (pretrained weights)</text><text x="68" y="205">Fine-tuned on our planning CT dataset</text><text x="455" y="179">GTV and CTV segmentation</text><text x="455" y="205">3D dose generation</text><text x="842" y="179">CT and RADIANT-generated dose</text><text x="842" y="205">Task-specific prediction heads</text></g>
   <path d="M390 170h30m-8-8 8 8-8 8M777 170h30m-8-8 8 8-8 8" fill="none" stroke="#728aa0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
