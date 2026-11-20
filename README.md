@@ -12,7 +12,7 @@ RADIANT (Radiotherapy Anatomy-Dose Integrated fouNdAtion representaTion) is a ra
 
 ## RADIANT development
 
-RADIANT was developed using a two-stage framework based on the TAP-CT transformer encoder. For downstream clinical prediction, RADIANT-derived anatomy-dose representations were adapted to each endpoint using task-specific prediction heads.
+RADIANT was developed using a two-stage framework based on the TAP-CT transformer encoder. For downstream clinical prediction, RADIANT-derived representations were adapted to each endpoint using task-specific prediction heads.
 
 ### Stage 1: self-supervised pretraining
 
