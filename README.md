@@ -30,9 +30,9 @@ In Stage 2, the pretrained encoder was refined through joint training on radioth
 
 The downstream model integrated anatomical features from treatment-planning CT with dose features derived from the RADIANT-generated dose distribution. The radiotherapy-task-refined RADIANT encoder was kept fixed, while the 3D ConvNeXt-style dose branch, fusion module and task-specific prediction heads were optimised. For lung cancer tasks, immunotherapy use could be included before the first fully connected layer.
 
-<img src="assets/stage3.svg" alt="Stage 3 downstream-task adaptation" width="100%">
+<img src="assets/stage3.png" alt="Stage 3 downstream-task adaptation" width="100%">
 
-*The Stage 1 and Stage 2 diagrams are taken from Supplementary Fig. 2. The Stage 3 diagram presents the architecture described in Supplementary Methods 1.6.*
+*The Stage 1, Stage 2 and Stage 3 diagrams are taken from Supplementary Fig. 2.*
 
 ## Data preprocessing
 
