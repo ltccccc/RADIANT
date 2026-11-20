@@ -32,7 +32,6 @@ The downstream model integrated anatomical features from treatment-planning CT w
 
 <img src="assets/stage3.png" alt="Stage 3 downstream-task adaptation" width="100%">
 
-*The Stage 1, Stage 2 and Stage 3 diagrams are taken from Supplementary Fig. 2.*
 
 ## Data preprocessing
 
