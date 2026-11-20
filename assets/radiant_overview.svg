@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 284" role="img" aria-labelledby="title description">
-  <title id="title">RADIANT at a glance</title>
-  <desc id="description">Treatment-planning CT is adapted with self-supervision, refined through target and dose tasks, then combined with predicted dose for clinical prediction.</desc>
+  <title id="title">RADIANT: Three-stage Framework</title>
+  <desc id="description">Stage 1 self-supervised pretraining, Stage 2 radiotherapy-task refinement, and Stage 3 downstream-task adaptation.</desc>
   <rect width="1200" height="284" rx="24" fill="#f4f8fc"/>
   <path d="M24 0h1152a24 24 0 0 1 24 24v236a24 24 0 0 1-24 24H24A24 24 0 0 1 0 260V24A24 24 0 0 1 24 0Z" fill="none" stroke="#dce7f1" stroke-width="2"/>
-  <text x="48" y="49" fill="#17324f" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">One CT encoder, three connected stages</text>
-  <text x="48" y="76" fill="#52677c" font-family="Arial,Helvetica,sans-serif" font-size="15">From treatment-planning anatomy to generated dose and clinical predictions</text>
+  <text x="48" y="49" fill="#17324f" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">RADIANT: Three-stage Framework</text>
+  <text x="48" y="76" fill="#52677c" font-family="Arial,Helvetica,sans-serif" font-size="15">Model architecture</text>
   <rect x="48" y="105" width="329" height="130" rx="15" fill="#e9f1ff" stroke="#9ebbee" stroke-width="2"/>
   <rect x="435" y="105" width="329" height="130" rx="15" fill="#ecf7f3" stroke="#9ccdbd" stroke-width="2"/>
   <rect x="822" y="105" width="329" height="130" rx="15" fill="#f3effc" stroke="#c0afe9" stroke-width="2"/>
@@ -12,7 +12,7 @@
   <circle cx="465" cy="135" r="16" fill="#23846c"/>
   <circle cx="852" cy="135" r="16" fill="#7559b3"/>
   <g fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" text-anchor="middle"><text x="78" y="141">1</text><text x="465" y="141">2</text><text x="852" y="141">3</text></g>
-  <g font-family="Arial,Helvetica,sans-serif" fill="#17324f" font-size="20" font-weight="700"><text x="104" y="141">CT adaptation</text><text x="491" y="141">Task refinement</text><text x="878" y="141">Clinical prediction</text></g>
-  <g font-family="Arial,Helvetica,sans-serif" fill="#40576e" font-size="15"><text x="68" y="179">TAP-CT + DINO / iBOT / KoLeo</text><text x="68" y="205">Self-supervised planning CT</text><text x="455" y="179">GTV → CTV → 3D dose</text><text x="455" y="205">Shared encoder, joint training</text><text x="842" y="179">CT features + predicted dose</text><text x="842" y="205">Classification or survival</text></g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#17324f" font-size="18" font-weight="700"><text x="104" y="141">Self-supervised pretraining</text><text x="491" y="141">Radiotherapy-task refinement</text><text x="878" y="141">Downstream-task adaptation</text></g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#40576e" font-size="15"><text x="68" y="179">TAP-CT weights</text><text x="68" y="205">Treatment-planning CT</text><text x="455" y="179">GTV and CTV segmentation</text><text x="455" y="205">3D dose generation</text><text x="842" y="179">CT and RADIANT-generated dose</text><text x="842" y="205">Task-specific prediction heads</text></g>
   <path d="M390 170h30m-8-8 8 8-8 8M777 170h30m-8-8 8 8-8 8" fill="none" stroke="#728aa0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
