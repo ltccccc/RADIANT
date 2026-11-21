@@ -7,12 +7,6 @@ import SimpleITK as sitk
 from ..data.geometry import check_image, grid, resample, crop_pad, from_array
 from ..data.manifest import read_manifest, sha256
 
-'''
-把每个病例的原始数据整理成模型可以使用的格式：以 CT 的空间坐标为基准，
-对齐 GTV、CTV、Dose map 和可选的 OAR masks，CT 和剂量采用线性插值，轮廓采用最近邻插值；
-将 CT 强度截断到 −1000～1000 HU，将剂量除以该患者的处方剂量，并保留大于 1 的热点；
-对所有数据同步进行中心裁剪或补边，默认得到 96×336×336（深×高×宽） 的尺寸，同时正确更新空间原点。
-'''
 
 
 def prepare_case(row, output, spacing_xyz=None, shape_dhw=(96, 336, 336)):
@@ -40,7 +34,7 @@ def prepare_case(row, output, spacing_xyz=None, shape_dhw=(96, 336, 336)):
             raise ValueError("Unsafe OAR name")
         images["oar_" + name] = resample(sitk.ReadImage(path), reference, label=True)
     if row.get("dose_path"):
-        rx = float(row["prescription_gy"]) #处方剂量
+        rx = float(row["prescription_gy"]) 
         if not np.isfinite(rx) or rx <= 0:
             raise ValueError("Verified positive prescription_gy required")
         units = row.get("dose_units")
